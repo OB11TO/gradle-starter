@@ -17,3 +17,7 @@ dependencies {
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
+
+println("configuration phase")
+println("gradle id: ${gradle.hashCode()}")
+println("root: ${rootProject.hashCode()}, ${project.hashCode()}, ${gradle.rootProject.hashCode()}")
